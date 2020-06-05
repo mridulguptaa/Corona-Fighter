@@ -1,6 +1,6 @@
 Love Game
 
 Play here : 
-https://mridulguptaa.github.io/Love-Game/
+https://mridulguptaa.github.io/Corona-Fighter/
 
 Sounds On!!
