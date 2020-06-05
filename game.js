@@ -244,14 +244,22 @@ function update(){
     
     for(let i=0;i<enemy.length;i++){
         if(isOverlap(enemy[i],player,0)){
-            player.health -= 50;
-            if(player.health <0){
+            player.health = 0;
+            if(player.health == 0){
                 console.log(player.health);
-                sound1.stop();
+                //sound1.stop();
                 sound3.play();
-                game_over = true;
-                alert("Game Over" + player.health + "   Refresh Page to Play Again");
-                exit();
+
+                //send player back to original place.
+
+                //sound1.play();
+                player.x = 20;
+                player.y = H/2;
+                player.health = 100;
+
+                // game_over = true;
+                // alert("Game Over" + player.health + "   Refresh Page to Play Again");
+                // exit();
                 //return;
             }
         }
