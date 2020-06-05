@@ -7,7 +7,7 @@ function load_images(){
     player_img.src = "M7.png";
     
     gem_image = new Image;
-    gem_image.src = "M1.png";
+    gem_image.src = "m1.png";
 
     heart_image = new Image;
     heart_image.src = "h2.png";
@@ -28,6 +28,7 @@ function init(){
     pen = canvas.getContext('2d');
     console.log(pen);
     game_over = false;
+    win = false;
     
     e1 = {
 		x : 150,
@@ -234,7 +235,7 @@ function update(){
     	pen.drawImage(heart_image,heart.x,heart.y,heart.w,heart.h);
     	
         console.log("You Won");
-        
+        win - true;
         game_over = true;        
     }
     
@@ -277,7 +278,8 @@ function gameloop(){
     	pen.drawImage(heart_image,heart.x,heart.y,heart.w,heart.h);
         clearInterval(f);
         pen.drawImage(heart_image,heart.x,heart.y,heart.w,heart.h);
-        alert("You Won!");
+        if(win)
+        	alert("You Won!");
         return;
     }
     draw();
